@@ -1,0 +1,131 @@
+(footprint "PTS647SK38SMTR2"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -9 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "0eddf15c-add2-4b14-8481-20321f81a4a2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "PTS647SK38SMTR2"
+		(at 0 -8 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "1fd90e43-a58c-48d2-93c1-4dff3b869b29")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ded458fd-4743-47e3-92b3-71f4a349d1b0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "532d2e5d-85ef-4b46-8dcb-626669792d14")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -3.75 -3)
+		(end 3.75 3)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "cd109e2c-86e1-4a91-82e8-d58154dfd591")
+	)
+	(fp_rect
+		(start -3.75 -3)
+		(end 3.75 3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "a938837b-770d-469b-bac6-1d8dc5f325f0")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -6.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "f1b4e985-28f3-42f5-9e79-440af4979db3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.7 -1.7)
+		(size 1.55 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "96f90d61-8a00-4423-9b0f-40b4d9e8d1e0")
+	)
+	(pad "2" smd rect
+		(at 2.55 -1.7)
+		(size 1.55 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "6ad950b2-4911-491f-a01d-c1c6fcdd832a")
+	)
+	(pad "3" smd rect
+		(at -2.7 1.5)
+		(size 1.55 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "4255459a-6b53-4207-acd1-e77a9bbf6002")
+	)
+	(pad "4" smd rect
+		(at 2.55 1.5)
+		(size 1.55 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "ebaec632-e951-42b0-b34c-24380b875c18")
+	)
+	(embedded_fonts no)
+	(model "/home/jahjah/Desktop/EEG SHIELD/KiCAD/libraries/3D models/4.5x4.5mm Tactile Push Button/TL3305BFxxxxG.stp"
+		(offset
+			(xyz 0 0.001 0)
+		)
+		(scale
+			(xyz 0.9 1.101 0.9)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

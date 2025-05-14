@@ -1,0 +1,10 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "ADS1299-4")(type "KiCad")(uri "/home/jahjah/Desktop/EEG SHIELD/KiCAD/libraries/footprints/ADS1299.pretty")(options "")(descr ""))
+  (lib (name "ESP32-DEVKITC-32E")(type "KiCad")(uri "/home/jahjah/Desktop/EEG SHIELD/KiCAD/libraries/footprints/ESP32-DEVKITC-32E.pretty")(options "")(descr ""))
+  (lib (name "TPS60403DBVT")(type "KiCad")(uri "/home/jahjah/Desktop/EEG SHIELD/KiCAD/libraries/footprints/TPS60403DBVT.pretty")(options "")(descr ""))
+  (lib (name "TPS72325DBVT")(type "KiCad")(uri "/home/jahjah/Desktop/EEG SHIELD/KiCAD/libraries/footprints/TPS72325DBVT.pretty")(options "")(descr ""))
+  (lib (name "SW")(type "KiCad")(uri "/home/jahjah/Desktop/EEG SHIELD/KiCAD/libraries/footprints/SW.pretty")(options "")(descr ""))
+  (lib (name "Lib_STLO")(type "KiCad")(uri "/home/jahjah/Desktop/EEG SHIELD/KiCAD/libraries/Lib-STLO/0CSL_D1_V1.pretty")(options "")(descr ""))
+  (lib (name "TestPoints")(type "KiCad")(uri "${KIPRJMOD}/TestPoints.pretty")(options "")(descr ""))
+)

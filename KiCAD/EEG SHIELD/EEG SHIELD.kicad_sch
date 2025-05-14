@@ -1,0 +1,1275 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "5cf76de8-22e0-4643-82d4-e1b2b10fbc02")
+	(paper "A4")
+	(title_block
+		(title "EEG SHIELD")
+		(date "2025-03-31")
+		(rev "B")
+		(company "Cégep de Saint-Laurent")
+		(comment 1 "Kristian Agbogda et Anisan Gunarathinam")
+		(comment 2 "Supervisé par")
+		(comment 3 "Jia Peng Xu")
+		(comment 4 "Réalisé par")
+	)
+	(lib_symbols
+		(symbol "Mechanical:MountingHole"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole without connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(junction
+		(at 208.28 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6275e014-0ab8-415e-a26f-1bfafc6d5a04")
+	)
+	(junction
+		(at 210.82 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "edb8c83c-a370-4dda-aa8c-80ef13a07eab")
+	)
+	(wire
+		(pts
+			(xy 138.43 146.05) (xy 152.4 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1246a779-98d1-4d9e-bd07-27496c3fb8fe")
+	)
+	(wire
+		(pts
+			(xy 83.82 80.01) (xy 83.82 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19ed2f38-1116-441b-9808-e9bae4e7cf4c")
+	)
+	(wire
+		(pts
+			(xy 138.43 124.46) (xy 152.4 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a6db20c-7f74-4c98-8d31-2c55df8e9352")
+	)
+	(wire
+		(pts
+			(xy 106.68 80.01) (xy 106.68 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bb04672-dab8-4ebc-96db-c346a182288f")
+	)
+	(wire
+		(pts
+			(xy 138.43 119.38) (xy 152.4 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "414d72a5-6635-4925-b675-e5061c7aac5e")
+	)
+	(wire
+		(pts
+			(xy 138.43 135.89) (xy 152.4 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a880705-8b42-46ba-a904-abbd780c0f9a")
+	)
+	(wire
+		(pts
+			(xy 210.82 88.9) (xy 210.82 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51a2ba62-8a98-44f8-adcb-1f103f179f01")
+	)
+	(wire
+		(pts
+			(xy 208.28 88.9) (xy 208.28 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5231cbf4-dd5a-4a90-a64e-cb868d6cb701")
+	)
+	(wire
+		(pts
+			(xy 208.28 97.79) (xy 208.28 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61835156-2684-44ea-8413-eace80884531")
+	)
+	(wire
+		(pts
+			(xy 210.82 97.79) (xy 210.82 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "700e28da-16cc-4ced-8805-d5e551d7a3bb")
+	)
+	(wire
+		(pts
+			(xy 138.43 121.92) (xy 152.4 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7bfa5867-4d5c-413d-9ebc-e40f86f92a0f")
+	)
+	(wire
+		(pts
+			(xy 86.36 80.01) (xy 86.36 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cc7c385-eef2-42ae-b872-0251340f1aca")
+	)
+	(wire
+		(pts
+			(xy 109.22 80.01) (xy 109.22 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d54494d-4932-465b-8357-47fa38a0dbcc")
+	)
+	(wire
+		(pts
+			(xy 111.76 80.01) (xy 111.76 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aad03f2c-fe1e-4ddc-90da-435bd96cd85a")
+	)
+	(wire
+		(pts
+			(xy 104.14 80.01) (xy 104.14 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6849017-2712-42c7-b4ec-c4d0a4e872c5")
+	)
+	(wire
+		(pts
+			(xy 138.43 133.35) (xy 152.4 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db2ec4dd-77ae-4291-92a9-8748f8a6ad31")
+	)
+	(wire
+		(pts
+			(xy 138.43 116.84) (xy 152.4 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc1e2045-9946-401d-996c-df5419d7aa80")
+	)
+	(wire
+		(pts
+			(xy 138.43 143.51) (xy 152.4 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef8fc88e-8448-4ea9-993b-29fcf2b14b07")
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 222.25 154.94 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "2ca203fd-96d1-48a7-b691-8cb914ddfa25")
+		(property "Reference" "H4"
+			(at 219.71 153.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 219.71 156.2099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad_TopBottom"
+			(at 222.25 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 222.25 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 222.25 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "EEG SHIELD"
+				(path "/5cf76de8-22e0-4643-82d4-e1b2b10fbc02"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 224.79 57.15 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "4f6ed601-f6c3-4505-be29-18eb2f36b9e0")
+		(property "Reference" "H2"
+			(at 222.25 55.8799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 222.25 58.4199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad_TopBottom"
+			(at 224.79 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 224.79 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 224.79 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "EEG SHIELD"
+				(path "/5cf76de8-22e0-4643-82d4-e1b2b10fbc02"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 78.74 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "710d6a10-719e-4c12-9be4-1c056e26b3c0")
+		(property "Reference" "H1"
+			(at 81.28 53.3399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 81.28 55.8799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad_TopBottom"
+			(at 78.74 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 78.74 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 78.74 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/5cf76de8-22e0-4643-82d4-e1b2b10fbc02"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 78.74 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "82385120-07ad-4bf1-b050-511e22806cca")
+		(property "Reference" "H3"
+			(at 81.28 153.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 81.28 156.2099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_DIN965_Pad_TopBottom"
+			(at 78.74 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 78.74 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 78.74 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "EEG SHIELD"
+				(path "/5cf76de8-22e0-4643-82d4-e1b2b10fbc02"
+					(reference "H3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 208.28 97.79 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b59df28b-dc27-4f58-acd7-9fb134e9af66")
+		(property "Reference" "#FLG01"
+			(at 206.375 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 204.47 97.7899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 208.28 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 208.28 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 208.28 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f812cff9-a7be-4ff4-a630-1931b6e21830")
+		)
+		(instances
+			(project ""
+				(path "/5cf76de8-22e0-4643-82d4-e1b2b10fbc02"
+					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 210.82 97.79 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f273fc22-04ea-40ff-9846-5386acab7254")
+		(property "Reference" "#FLG03"
+			(at 212.725 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 214.63 97.7899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 210.82 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 210.82 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 210.82 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "425f19ef-0bc2-4252-b804-b01b7dd23f2d")
+		)
+		(instances
+			(project "EEG SHIELD"
+				(path "/5cf76de8-22e0-4643-82d4-e1b2b10fbc02"
+					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 77.47 60.96)
+		(size 60.96 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "499c458f-6cd8-4fa8-914e-8ed22c216dec")
+		(property "Sheetname" "RPi3B (5V source)"
+			(at 78.232 59.944 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "RPi3B.kicad_sch"
+			(at 77.978 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "RPi_CE0" input
+			(at 111.76 80.01 270)
+			(uuid "b095737d-f0cd-4a4b-8948-80ceb78fcb79")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "RPi_MISO" input
+			(at 109.22 80.01 270)
+			(uuid "029fe557-ddd1-4687-8879-0145763bf344")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "RPi_MOSI" input
+			(at 106.68 80.01 270)
+			(uuid "e15ac22a-a1ad-4367-bfde-54ed333a4d43")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "RPi_SCLK" input
+			(at 104.14 80.01 270)
+			(uuid "f40407ff-0812-46e9-b1da-0c7711f1d4a3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "RX" input
+			(at 83.82 80.01 270)
+			(uuid "49043f85-37ee-4a1b-9095-3480e6c3cb7d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "TX" input
+			(at 86.36 80.01 270)
+			(uuid "b4fc08fb-5f42-48c5-8613-08a9c3de3066")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "EEG SHIELD"
+				(path "/5cf76de8-22e0-4643-82d4-e1b2b10fbc02"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 152.4 106.68)
+		(size 72.39 44.45)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "5a816502-e691-44d8-b5ee-72c29f158362")
+		(property "Sheetname" "ADS1299-4"
+			(at 152.4 105.9684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ads1299.kicad_sch"
+			(at 153.162 149.098 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ADS_SPI_DIN" input
+			(at 152.4 116.84 180)
+			(uuid "dd631d39-b7a9-43e3-9706-0b13f42ba00d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "ADS_SPI_DOUT" input
+			(at 152.4 119.38 180)
+			(uuid "8a3aa43b-ab96-48ed-a4a8-076bfbafc726")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "ADS_SPI_SCLK" input
+			(at 152.4 121.92 180)
+			(uuid "19cc2361-1b92-4fb4-9e07-5f7c9fa213e2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "ADS_SPI_START" input
+			(at 152.4 135.89 180)
+			(uuid "6a29f48c-6a7d-401f-8faa-b9e78aa15b5e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{ADS_PWDN}" input
+			(at 152.4 143.51 180)
+			(uuid "79e40735-7d3a-45c7-b2bf-3cdc68a59905")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{ADS_RESET}" input
+			(at 152.4 146.05 180)
+			(uuid "ebb39f0e-5eb3-4e0c-804b-01271da8e4da")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{ADS_SPI_CS}" input
+			(at 152.4 124.46 180)
+			(uuid "323579fe-3838-453b-a578-0a12e0094ae9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "~{ADS_SPI_DRDY}" input
+			(at 152.4 133.35 180)
+			(uuid "f73587b4-e03f-4611-bc27-73ef4a05bb26")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "AVDD" input
+			(at 210.82 106.68 90)
+			(uuid "59749589-eee9-49e1-860f-f56732bf2401")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "AVSS" input
+			(at 208.28 106.68 90)
+			(uuid "c8b1deda-ab9d-42af-93b0-917affff8d0d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "EEG SHIELD"
+				(path "/5cf76de8-22e0-4643-82d4-e1b2b10fbc02"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 77.47 106.68)
+		(size 60.96 44.45)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "cfac3201-e7d2-4578-bc2d-039914c5c440")
+		(property "Sheetname" "ESP32-DEVKITC-32E"
+			(at 77.47 105.9684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "esp32.kicad_sch"
+			(at 78.486 148.844 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VSPI_CS" input
+			(at 111.76 106.68 90)
+			(uuid "ea04a853-ac6c-4ad0-8006-923a1b434595")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VSPI_MISO" input
+			(at 109.22 106.68 90)
+			(uuid "748a693a-82d6-4959-a27a-020cc455e455")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VSPI_MOSI" input
+			(at 106.68 106.68 90)
+			(uuid "c0184a21-cb76-4046-8aad-e2b803772d76")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VSPI_SCLK" input
+			(at 104.14 106.68 90)
+			(uuid "6715d398-86f0-49e7-b655-70efad669278")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "ADS_SPI_START" input
+			(at 138.43 135.89 0)
+			(uuid "3f12d501-59bb-4f21-94fb-07540a84d5e9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "HSPI_SCLK" input
+			(at 138.43 121.92 0)
+			(uuid "bf15ccb9-6d6c-4c43-a48c-7018d6a23bd1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "HSPI_CS" input
+			(at 138.43 124.46 0)
+			(uuid "a53447ad-41b5-4491-8114-70642d01f038")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "HSPI_MISO" input
+			(at 138.43 119.38 0)
+			(uuid "719dfff4-c862-4c5a-a5c3-9d05db6f03ea")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "HSPI_MOSI" input
+			(at 138.43 116.84 0)
+			(uuid "5b41dd11-6a12-45db-8010-ece29195ff54")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "RX" input
+			(at 86.36 106.68 90)
+			(uuid "a7d3fc2b-9104-4f1b-ad7d-aac331c2b15a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "TX" input
+			(at 83.82 106.68 90)
+			(uuid "6b6d7cfe-7dcb-4d4d-a781-3ffc22d7181c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{ADS_PWDN}" input
+			(at 138.43 143.51 0)
+			(uuid "5af076c1-4319-4142-bf90-b6b57f0d16ca")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{ADS_RESET}" input
+			(at 138.43 146.05 0)
+			(uuid "5805bf36-dea1-4349-acee-5a0319f85080")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "~{ADS_SPI_DRDY}" input
+			(at 138.43 133.35 0)
+			(uuid "6d601d57-63c8-440e-94c9-5a56bb592fe8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "EEG SHIELD"
+				(path "/5cf76de8-22e0-4643-82d4-e1b2b10fbc02"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 152.4 60.96)
+		(size 73.66 27.94)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "e0a5b466-2879-45a6-88cd-9ffc7421917e")
+		(property "Sheetname" "Alimentation ADS1299-4"
+			(at 152.4 60.2484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "alimentations.kicad_sch"
+			(at 152.908 86.868 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "AVDD" input
+			(at 210.82 88.9 270)
+			(uuid "93bbb3d8-c490-4a0c-b797-6e180c742fda")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "AVSS" input
+			(at 208.28 88.9 270)
+			(uuid "84b27bf0-36f8-4dee-a10f-a94dbad47e53")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "EEG SHIELD"
+				(path "/5cf76de8-22e0-4643-82d4-e1b2b10fbc02"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

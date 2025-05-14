@@ -1,0 +1,8 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ADS1299-4")(type "KiCad")(uri "/home/jahjah/Desktop/EEG SHIELD/KiCAD/libraries/symbols/ADS1299.kicad_sym")(options "")(descr ""))
+  (lib (name "ESP32-DEVKITC-32E")(type "KiCad")(uri "/home/jahjah/Desktop/EEG SHIELD/KiCAD/libraries/symbols/ESP32-DEVKITC-32E.kicad_sym")(options "")(descr ""))
+  (lib (name "TPS72325DBVT")(type "KiCad")(uri "/home/jahjah/Desktop/EEG SHIELD/KiCAD/libraries/symbols/TPS72325DBVT.kicad_sym")(options "")(descr ""))
+  (lib (name "TPS60403DBVT")(type "KiCad")(uri "/home/jahjah/Desktop/EEG SHIELD/KiCAD/libraries/symbols/TPS60403DBVT.kicad_sym")(options "")(descr ""))
+  (lib (name "RPi_3B")(type "KiCad")(uri "/home/jahjah/Desktop/EEG SHIELD/KiCAD/libraries/symbols/RPi_3B.kicad_sym")(options "")(descr ""))
+)
