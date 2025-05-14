@@ -1,0 +1,10 @@
+Pi 3 is way too slow to develop on
+Fix: mount pi directory onto your PC via SSH
+
+RUN on PC
+1. package to install: sshfs (apt, pacman)
+2. mkdir ~/pi
+3. sshfs pi@<pi_ip>:/home/pi ~/pi
+3.1. actual: sshfs jia@192.168.2.216:/home/jia ~/pi_SSHFS
+4. fusermount -u ~/pi (for unmounting when you're done)
+4.1. actual: fusermount -u ~/pi_SSHFS 
