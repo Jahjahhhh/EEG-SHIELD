@@ -93,7 +93,7 @@ void CONFIG2() {                                                      // CONFIG2
   digitalWrite(H_CS_PIN, LOW);                                        // Test signals generated internally
                                                                       // Test signal amplitude: 1*-(VREFP -VREFN) / 2400
   hspi.beginTransaction(SPISettings(SPI_CLK, MSBFIRST, SPI_MODE1));   // Test signal frequency: Pulsed at FCLK/2^21
-  hpspi.transfer(CONFIG2_ADDR);
+  hspi.transfer(CONFIG2_ADDR);
   hspi.transfer(0b11010001);
   hspi.endTransaction();
 
