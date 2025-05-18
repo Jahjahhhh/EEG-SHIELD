@@ -55,14 +55,6 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 
 ---
 
-## 🏗 How to Build / Order
-
-1. Open the `.kicad_pro` project in KiCad 9.
-2. Swap that LDO, modify its traces correctly.
-3. Generate Gerber files with KiCad's Fabrication tool.
-
----
-
 ## 📦 BOM (Bill of Materials)
 ### IMPORTANT
 - The RPi extension connector is a 24 pin connector, not a 20...
