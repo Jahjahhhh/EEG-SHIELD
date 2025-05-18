@@ -53,7 +53,7 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 - Arduino-cli
   - Allows to compile/upload/monitor the pi with a SSH session (Arduino IDE requires a GUI)
   - Can integrate into neovim, since it is just a command
-  - Example found in `compile-upload-monitor.sh`
+  - Example found in `source/projet6/compile-upload-monitor.sh`
 
 ---
 
@@ -61,7 +61,7 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 ### IMPORTANT
 - The RPi extension connector is a 24 pin connector, not a 20...
 - The parts are ordered in 2x, 3x, in case you lose/break the part or they're bad.
-- Need electrodes and abrasive low imped gel
+- If buying with the cegep, you need electrodes and low impedance gel (example at the end of the BOM)
 - TPS73225DBVR missing in the BOM (board will short if you use 2 TPS72325DBVR instead of a TPS72325DBVR and a TPS73225DBVR)
 - The BOM is missing the ESP32 socket, buy 2 1x19 PinSocket Headers, 2.54 mm pitch per board, or 1x20 and cut the extra off)
 
