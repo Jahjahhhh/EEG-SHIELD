@@ -50,8 +50,10 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 
 - KiCad version: 9
 - Python 3
-- Arduino-cli (cli version of Arduino IDE, less laggy, works with neovim)
-  - Look for file `compile-upload-monitor.sh` to see how
+- Arduino-cli
+  - Allows to compile/upload/monitor the pi with a SSH session (Arduino IDE requires a GUI)
+  - Can integrate into neovim, since it is just a command
+  - Example found in `compile-upload-monitor.sh`
 
 ---
 
