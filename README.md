@@ -6,7 +6,7 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 
 ---
 
-## 🧱 Project File Structure
+## Project File Structure
 
 | Folder        | Contents                                      |
 |---------------|-----------------------------------------------|
@@ -24,7 +24,7 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 
 ---
 
-## 📷 Images
+## Images
 
 ### Schematics
 #### Raspberry Pi 3B+ Circuit
@@ -46,7 +46,7 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 
 ---
 
-## 🛠 Tools Used
+## Tools Used
 
 - KiCad version: 9
 - Python 3
@@ -57,7 +57,7 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 
 ---
 
-## 📦 BOM (Bill of Materials)
+## BOM (Bill of Materials)
 ### IMPORTANT
 - The RPi extension connector is a 24 pin connector, not a 20...
 - The parts are ordered in 2x, 3x, in case you lose/break the part or they're bad.
@@ -65,7 +65,7 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 - TPS73225DBVR missing in the BOM (board will short if you use 2 TPS72325DBVR instead of a TPS72325DBVR and a TPS73225DBVR)
 - The BOM is missing the ESP32 socket, buy 2 1x19 PinSocket Headers, 2.54 mm pitch per board, or 1x20 and cut the extra off)
 
-|   Qty | Designators                                                                                         | Value                      | Supplier Link                                                                                                                                                                                                                                                        | Footprint                                     |
+|   Qty | Designators                                                                                         | Name/Description                      | Supplier Link                                                                                                                                                                                                                                                        | Footprint                                     |
 |------:|:----------------------------------------------------------------------------------------------------|:---------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------|
 |     3 | J2                                                                                                  | RPi 3B 40 Pin Socket       | https://www.digikey.ca/en/products/detail/samtec-inc/ESQ-120-44-T-D/7098774                                                                                                                                                                                          | PinSocket_2x20_P2.54mm_Vertical               |
 |     3 | J3                                                                                                  | RPi 3B Extension Connector | https://www.digikey.ca/en/products/detail/sullins-connector-solutions/PPTC102LFBN-RC/810216                                                                                                                                                                          | PinHeader_2x12_P2.54mm_Vertical               |
@@ -95,11 +95,11 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 
 ---
 
-## ✍️ Author & Contributions
+## Author & Contributions
 
 - Project by Jia Peng Xu
 - Supervised by Kristian M. Agbogba
 
 ---
 ## Future considerations
-- Use something else than an ESP32, they're running FreeRTOS under the hood! Did not know this at the time. Will use something like an STM32 or a Atmel micro next time.
+- Use something else than an ESP32, they're running FreeRTOS under the hood! Did not know this at the time. Will use something like an STM32 or an Atmel micro next time.
