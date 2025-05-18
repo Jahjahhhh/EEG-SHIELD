@@ -1,4 +1,4 @@
-# EEG-SHIELD
+#EEG-SHIELD
 
 Acquisition system for electroencephalogram. Using TI's ADS1299-4 low noise, programmable gain amplifier, 4 channel ADC.
 The data is sent to a PC using SPI (raspberry pi in this case) to view measured signals. In order to not lose any bits of data, 
@@ -41,6 +41,8 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 ![PCB](images/PCB.png)
 ### 3D render
 ![3D](images/3D.png)
+### End result
+![Final](images/Final.jpg)
 
 ---
 
