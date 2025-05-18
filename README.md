@@ -2,7 +2,7 @@
 
 Electroencephalography (EEG) acquisition system. Using TI's ADS1299-4 low noise, programmable gain amplifier, 4 channel ADC.
 The data is sent to a PC using SPI (raspberry pi in this case) to view measured signals. In order to not lose any bits of data, 
-we use a microcontroller (ESP32) to interface with the ADS1299 and relay information to the Raspberry Pi 3B+ (because the RPi is busy interrupting since it is running an OS).
+we use a microcontroller (ESP32) to interface with the ADS1299 and relay information to the Raspberry Pi 3B+ (the Pi is busy interrupting, it is running an OS).
 
 ---
 
