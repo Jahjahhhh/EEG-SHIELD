@@ -1,4 +1,4 @@
-# EEG-SHIELD
+## EEG-SHIELD
 
 ---
 
