@@ -6,30 +6,6 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 
 ---
 
-## 📷 Images
-
-- Schematic screenshot
-  - ![Schematic](images/RPi.png)
-  - ![ESP32](images/ESP32.png
-  - ![PowerSupply](images/PSU.png)
-    - PSU Issue: it's wrong, please dont send this to the manufacturer, one of the LDOs needs to be swapped for a TPS73225DBVR (and traces modified)
-  - ![ADS1299](images/ADS1299.png)
-
-- PCB layout
-  - ![PCB](images/PCB.png)
-- 3D render
-  - ![3D](images/3D.png)
-
----
-
-## 🛠 Tools Used
-
-- KiCad version: 9
-- Python 3
-- Arduino IDE
-
----
-
 ## 🧱 Project Structure
 
 | Folder        | Contents                                      |
@@ -48,6 +24,31 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 
 ---
 
+## 📷 Images
+
+### Schematic screenshot
+![Schematic](images/RPi.png)
+![ESP32](images/ESP32.png)
+### PSU Issue: it's wrong, please dont send this to the manufacturer, one of the LDOs needs to be swapped for a TPS73225DBVR (and traces modified)
+![PowerSupply](images/PSU.png)
+![ADS1299](images/ADS1299.png)
+
+### PCB layout
+![PCB](images/PCB.png)
+### 3D render
+![3D](images/3D.png)
+
+---
+
+## 🛠 Tools Used
+
+- KiCad version: 9
+- Python 3
+- Arduino-cli (cli version of Arduino IDE, less laggy, works with neovim)
+  - Look for file `compile-upload-monitor.sh` to see how
+
+---
+
 ## 🏗 How to Build / Order
 
 1. Open the `.kicad_pro` project in KiCad 9.
@@ -57,7 +58,11 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 ---
 
 ## 📦 BOM (Bill of Materials)
-
+### IMPORTANT
+- The RPi extension connector is a 24 pin connector, not a 20...
+- The parts are ordered in 2x, 3x, in case you lose/break the part or they're bad.
+- Need electrodes and abrasive low imped gel
+- TPS73225DBVR missing in the BOM (board will short if you use 2 TPS72325DBVR instead of a TPS72325DBVR and a TPS73225DBVR)
 |   Qty | Designators                                                                                         | Value                      | Supplier Link                                                                                                                                                                                                                                                        | Footprint                                     |
 |------:|:----------------------------------------------------------------------------------------------------|:---------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------|
 |     3 | J2                                                                                                  | RPi 3B 40 Pin Socket       | https://www.digikey.ca/en/products/detail/samtec-inc/ESQ-120-44-T-D/7098774                                                                                                                                                                                          | PinSocket_2x20_P2.54mm_Vertical               |
@@ -84,13 +89,11 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 |    12 | C32,C30,C26                                                                                         | 2u2                        | https://www.digikey.ca/en/products/detail/samsung-electro-mechanics/CL10A225KQ8NNWC/3887544                                                                                                                                                                          | C_0603_1608Metric_Pad1.08x0.95mm_HandSolder   |
 |     3 | C13                                                                                                 | 100u                       | https://www.digikey.ca/en/products/detail/murata-electronics/GRM32ER61A107ME20L/4905633                                                                                                                                                                              | C_1210_3225Metric_Pad1.33x2.70mm_HandSolder   |
 |     1 | nan                                                                                                 | Ten20 EEG Conductive Gel   | https://www.redskymedical.ca/products/ten-20-conductive?_pos=1&_sid=2f7834543&_ss=r                                                                                                                                                                                  | nan                                           |
-|     8 | nan                                                                                                 | Board spacers M2.5 18 mm   | https://www.digikey.ca/en/products/detail/w%C3%BCrth-elektronik/970180155/9488721?s=N4IgjCBcoEwJxVAYygMwIYBsDOBTANCAPZQDaIAzACwBsNFMIAuoQA4AuUIAyuwE4BLAHYBzEAF9CAdioRoIFJAw4CxMpTBSaCFiA5deg0RMJgaUgByIFaLHkIlI5WWAsAGCLv2Qe-YWMlwCwoEeUVlezUnSikPOClmNk4fQ38JcXEgA | nan                                           |
-|     1 | 48 INCH                                                                                             | EEG gold cup electrodes    | https://www.redskymedical.ca/products/redsky-medical-reusable-gold-cup-eeg-electrodes-pack-of-10?variant=43618580857090                                                                                                                                              | nan                                           |
-|   301 | nan                                                                                                 | nan                        | nan                                                                                                                                                                                                                                                                  | nan                                           |
+|     1 | nan                                                                                                 | Gold cup electrodes   | [https://www.digikey.ca/en/products/detail/w%C3%BCrth-elektronik/970180155/9488721?](https://shop.openbci.com/products/openbci-gold-cup-electrodes | nan                                           |
 
 ---
 
 ## ✍️ Author & Contributions
 
 - Project by Jia Peng Xu
-- Supervised by Kristian M. Agbogba and Anisan Gunarathinam
+- Supervised by Kristian M. Agbogba
