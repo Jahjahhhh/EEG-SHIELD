@@ -32,7 +32,7 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 #### ESP32 Circuit
 ![ESP32](images/ESP32.png)
 #### Power Circuit
-#### it's wrong, please dont send this to the manufacturer, one of the LDOs needs to be swapped for a TPS73225DBVR (and traces modified)
+#### it's wrong, please dont send this to the manufacturer, one of the LDOs (U4) needs to be swapped for a TPS73225DBVR (and traces modified)
 ![PowerSupply](images/PSU.png)
 #### ADS1299-4 Circuit
 ![ADS1299](images/ADS1299.png)
