@@ -43,6 +43,7 @@ uint8_t read_reg(uint8_t REG) {
   hspi.transfer(RREG | REG);          // RREG command with address 0x0
   hspi.transfer(0);                   // Number of register to read + 1
   uint8_t content = hspi.transfer(0); // Dummy byte to clock in response
+  hspi.endTransaction();
 
   digitalWrite(H_CS_PIN, HIGH);
 
@@ -54,7 +55,7 @@ void write_reg(uint8_t REG, uint8_t BYTE) {
 
   hspi.beginTransaction(SPISettings(SPI_CLK, MSBFIRST, SPI_MODE1));
   hspi.transfer(SDATAC_CMD);          // Gotta stop readings to r/w registers
-  hspi.transfer(RREG | REG);          // RREG command with address 0x0
+  hspi.transfer(WREG | REG);          // RREG command with address 0x0
   hspi.transfer(0);                   // Number of register to read + 1
   hspi.transfer(BYTE);                // Data to send
   hspi.endTransaction();
