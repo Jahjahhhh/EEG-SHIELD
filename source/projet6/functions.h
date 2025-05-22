@@ -22,6 +22,35 @@ void pin_init() {
 
   pinMode(ADS_RESET_PIN, OUTPUT);
   digitalWrite(ADS_RESET_PIN, HIGH);
+
+  pinMode(START_PIN, OUTPUT);
+  digitalWrite(START_PIN, LOW);
+
+  pinMode(DRDY_PIN, INPUT);
+
+  pinMode(LED1_PIN, OUTPUT);
+  digitalWrite(LED1_PIN, LOW);
+  
+//  pinMode(LED2_PIN, OUTPUT);
+//  digitalWrite(LED2_PIN, LOW);
+  
+//  pinMode(LED3_PIN, OUTPUT);
+//  digitalWrite(LED3_PIN, LOW);
+  
+  pinMode(LED4_PIN, OUTPUT);
+  digitalWrite(LED4_PIN, LOW);
+  
+  pinMode(LED5_PIN, OUTPUT);
+  digitalWrite(LED5_PIN, LOW);
+  
+  pinMode(LED6_PIN, OUTPUT);
+  digitalWrite(LED6_PIN, LOW);
+  
+  pinMode(LED7_PIN, OUTPUT);
+  digitalWrite(LED7_PIN, LOW);
+  
+  pinMode(LED8_PIN, OUTPUT);
+  digitalWrite(LED8_PIN, LOW);
 }
 
 void reset_reg_values() {
@@ -46,6 +75,7 @@ uint8_t read_reg(uint8_t REG) {
   hspi.endTransaction();
 
   digitalWrite(H_CS_PIN, HIGH);
+  delayMicroseconds(3);
 
   return content;
 }
@@ -56,11 +86,12 @@ void write_reg(uint8_t REG, uint8_t BYTE) {
   hspi.beginTransaction(SPISettings(SPI_CLK, MSBFIRST, SPI_MODE1));
   hspi.transfer(SDATAC_CMD);          // Gotta stop readings to r/w registers
   hspi.transfer(WREG | REG);          // RREG command with address 0x0
-  hspi.transfer(0);                   // Number of register to read + 1
+  hspi.transfer(0);                   // Number of register to write + 1
   hspi.transfer(BYTE);                // Data to send
   hspi.endTransaction();
 
   digitalWrite(H_CS_PIN, HIGH);
+  delayMicroseconds(3);
 }
 
 uint8_t get_chip_id() {
@@ -78,35 +109,12 @@ uint8_t get_chip_id() {
   return id;
 }
 
-void CONFIG1() {                                                      // CONFIG1 register current configuration
-  digitalWrite(H_CS_PIN, LOW);                                        // Multiple readback mode (no daisy chaining)
-                                                                      // Oscillator clock output disabled
-  hspi.beginTransaction(SPISettings(SPI_CLK, MSBFIRST, SPI_MODE1));   // Output data rate = 1 kSPS
-  hspi.transfer(WREG | CONFIG1_ADDR); // WREG cmd with addr 0x1
-  hspi.transfer(0); // Number of registers to read + 1
-  hspi.transfer(0b11010100); // Data to send
+void send_RDATAC() {
+  digitalWrite(H_CS_PIN, LOW);
+
+  hspi.beginTransaction(SPISettings(SPI_CLK, MSBFIRST, SPI_MODE1));
+  hspi.transfer(RDATAC_CMD);
   hspi.endTransaction();
 
-  digitalWrite(H_CS_PIN, HIGH);
-}
-
-void CONFIG2() {                                                      // CONFIG2 register current configuration
-  digitalWrite(H_CS_PIN, LOW);                                        // Test signals generated internally
-                                                                      // Test signal amplitude: 1*-(VREFP -VREFN) / 2400
-  hspi.beginTransaction(SPISettings(SPI_CLK, MSBFIRST, SPI_MODE1));   // Test signal frequency: Pulsed at FCLK/2^21
-  hspi.transfer(CONFIG2_ADDR);
-  hspi.transfer(0b11010001);
-  hspi.endTransaction();
-
-  digitalWrite(H_CS_PIN, HIGH);
-}
-
-void CONFIG3() {                                                      // CONFIG3 register current configuration (datasheets says send 0b11100000, p.62)
-  digitalWrite(H_CS_PIN, LOW);                                        // Enable internal reference buffer
-  hspi.beginTransaction(SPISettings(SPI_CLK, MSBFIRST, SPI_MODE1));   // BIAS_IN Signal is routed to the channel that has MUX_Setting 010
-  hspi.transfer(CONFIG3_ADDR);                                        // BIASREF signal (AVDD + AVSS) / 2 generated internally
-  hspi.transfer(0b11111110);                                          // BIAS buffer is enabled
-  hspi.endTransaction();                                              // BIAS sense is enabled
-                                                                      // BIAS is connected
   digitalWrite(H_CS_PIN, HIGH);
 }
