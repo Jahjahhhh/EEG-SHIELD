@@ -16,12 +16,15 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 | `KiCAD/libraries`| KiCad footprints and symbols                 |
 | `PDFs/`          | Useful PDFs for the project                  |
 | `images/`        | Images for the Github repository             |
-| `source/projet6` | The code                                     |
+| `source/projet6` | The ESP32 code directory                     |
 | `source/projet6/compile-upload-monitor.sh` | Script to build and monitor arduino script  |
 | `source/projet6/definitions.h` | #define (register definitions, etc) |
 | `source/projet6/functions.h` | Custom functions  |
 | `source/projet6/projet6.sh` | Main Arduino sketch, runs the functions in `functions.h`  |
-
+| `source/pi`      | The RPi code directory                            |
+| `source/pi/main.py`      | Reads data from ESP32 and formats it into data.txt |
+| `source/pi/data.txt`      | Raw data to be graphed |
+| `source/pi/plot.py`      | Reads `source/pi/data.txt` to generate a graph |
 ---
 
 ## Images
@@ -50,6 +53,7 @@ we use a microcontroller (ESP32) to interface with the ADS1299 and relay informa
 
 - KiCad version: 9
 - Python 3
+- Matplotlib
 - Arduino-cli
   - Allows to compile/upload/monitor the pi with a SSH session (Arduino IDE requires a GUI)
   - Can integrate into neovim, since it is just a command
