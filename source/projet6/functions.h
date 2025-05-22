@@ -13,6 +13,14 @@ void hspi_init() {
   hspi.begin(H_SCLK_PIN, H_MISO_PIN, H_MOSI_PIN, H_CS_PIN);
 }
 
+int32_t convert24To32bit(int32_t value24) {
+  value24 &= 0xFFFFFF;
+  if (value24 & 0x800000) {
+    value24 |= 0xFF000000;
+  }
+  return value24;
+}
+
 void pin_init() {
   pinMode(H_CS_PIN, OUTPUT);
   digitalWrite(H_CS_PIN, HIGH);

@@ -10,7 +10,7 @@ void onDRDY() {
 
 void setup() {
   pin_init();
-  serial_init(9600);
+  serial_init(115200);
   hspi_init();
   reset_reg_values();
 
@@ -66,6 +66,15 @@ void setup() {
   hspi.endTransaction();
   digitalWrite(H_CS_PIN, HIGH);
   delayMicroseconds(2);
+
+//  uint8_t res1 = read_reg(CH1SET_ADDR);
+//  uint8_t res2 = read_reg(CH2SET_ADDR);
+//  uint8_t res3 = read_reg(CH3SET_ADDR);
+//  uint8_t res4 = read_reg(CH4SET_ADDR);
+//  Serial.print(res1); Serial.print(" ");
+//  Serial.print(res2); Serial.print(" ");
+//  Serial.print(res3); Serial.print(" ");
+//  Serial.println(res4);
   
   attachInterrupt(digitalPinToInterrupt(DRDY_PIN), onDRDY, FALLING);
   delay(100);
@@ -86,80 +95,25 @@ void loop() {
   if(dataReady) {
     dataReady = false;
 
-    byte data[12] = {1,2,3,4,5,6,7,8,9,10,11};
+    byte data[15] = {0}; // 3 status bytes + 4 channels * 3 bytes = 15 bytes total
     digitalWrite(H_CS_PIN, LOW);
-    for(int i = 0; i < 12; i++) {
+    for(int i = 0; i < 15; i++) {
       data[i] = hspi.transfer(0);
     }
     digitalWrite(H_CS_PIN, HIGH);
-    for(int i = 0; i < 12; i++) {
-      Serial.println(data[i]);
-    }
+
+    int32_t status_bits24 = ((int32_t)data[0] << 16) | ((int32_t)data[1] << 8) | data[2];
+    int32_t chan1_bits24  = ((int32_t)data[3] << 16) | ((int32_t)data[4] << 8) | data[5];
+    int32_t chan2_bits24  = ((int32_t)data[6] << 16) | ((int32_t)data[7] << 8) | data[8];
+    int32_t chan3_bits24  = ((int32_t)data[9] << 16) | ((int32_t)data[10] << 8) | data[11];
+    int32_t chan4_bits24  = ((int32_t)data[12] << 16) | ((int32_t)data[13] << 8) | data[14];
+
+    int32_t chan1_bits32 = convert24To32bit(chan1_bits24);
+    int32_t chan2_bits32 = convert24To32bit(chan2_bits24);
+    int32_t chan3_bits32 = convert24To32bit(chan3_bits24);
+    int32_t chan4_bits32 = convert24To32bit(chan4_bits24);
+
+    int32_t channels[4] = {chan1_bits32, chan2_bits32, chan3_bits32, chan4_bits32};
+    Serial.write((uint8_t*)channels, sizeof(channels));
   }
 }
-
-//volatile bool dataReady = false;
-//
-//void onDRDY() {
-//  dataReady = true;
-//}
-//
-//void setup() {
-//  pin_init();
-//  serial_init(115200);
-//  hspi_init();
-//  reset_reg_values();
-//
-//  
-////  write_reg(CONFIG3_ADDR, 0b11100000); // 0xE0
-////  write_reg(CONFIG1_ADDR, 0b11010100); // 0xD4
-////  write_reg(CONFIG2_ADDR, 0b11010000); // 0xD0
-////  write_reg(CH1SET_ADDR,  0b00000101); // 0b101 for test signals
-////  write_reg(CH2SET_ADDR,  0b00000101); // 0b101 for test signals
-////  write_reg(CH3SET_ADDR,  0b00000101); // 0b101 for test signals
-////  write_reg(CH4SET_ADDR,  0b00000101); // 0b101 for test signals
-////  
-////  attachInterrupt(digitalPinToInterrupt(DRDY_PIN), onDRDY, FALLING);
-////  digitalWrite(START_PIN, HIGH);
-////  send_RDATAC();
-//}
-//
-//void loop() {
-////  byte data[12] = {1,2,3,4,5,5,6,7,8,9,10,11};
-////  
-////  Serial.print("Waiting on data ready.\n");
-////  while(digitalRead(DRDY_PIN) == HIGH);
-////  
-////  digitalWrite(H_CS_PIN, HIGH);
-////  
-////  hspi.beginTransaction(SPISettings(SPI_CLK, MSBFIRST, SPI_MODE1));
-////  
-////  for(int i = 0; i < 12; i++) {
-////    data[i] = hspi.transfer(0);
-////  }
-////  
-////  hspi.endTransaction();
-////  digitalWrite(H_CS_PIN, HIGH);
-////  
-////  for(int chan = 0; chan < 4; chan++) {
-////    for(int b = 0; b < 3; b++) {
-////      Serial.print(data[(chan * 3) + b]);
-////    }
-////    Serial.print("\n");
-////  }
-////Print ADS1299-4 ID (revision + model)
-//  uint8_t id = read_reg(ID_ADDR);
-//  Serial.printf("ADS1299-4 ID: 0x%02X\n", id);
-//
-//  write_reg(CONFIG1_ADDR, 0b11010100);
-//  delay(500);
-//
-//  uint8_t config1 = read_reg(CONFIG1_ADDR);
-//
-//  delay(500);
-//
-//  Serial.println(config1);
-//  Serial.printf("CONFIG1: 0x%02X\n", config1);
-//
-//  delay(500);
-//}
