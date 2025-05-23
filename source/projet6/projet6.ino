@@ -10,71 +10,28 @@ void onDRDY() {
 
 void setup() {
   pin_init();
-  serial_init(115200);
+  serial_init(1000000);
   hspi_init();
   reset_reg_values();
 
   delay(5000); // this gotta be long enough
 
-  digitalWrite(H_CS_PIN, LOW);
-  delayMicroseconds(2);
-  hspi.beginTransaction(SPISettings(SPI_CLK, MSBFIRST, SPI_MODE1));
-  hspi.transfer(SDATAC_CMD);
-  delayMicroseconds(2);
-  hspi.transfer(WREG | CONFIG3_ADDR);
-  delayMicroseconds(2);
-  hspi.transfer(0);
-  delayMicroseconds(2);
-  hspi.transfer(0b11100000); 
-  delayMicroseconds(2);
-  hspi.endTransaction();
-  digitalWrite(H_CS_PIN, HIGH);
-  delayMicroseconds(2);
+  write_reg(CONFIG3_ADDR, 0b11100000);
+  write_reg(CONFIG1_ADDR, 0b11010100);
+  write_reg(CONFIG2_ADDR, 0b11010000);
+  write_reg(CH1SET_ADDR, 0b00000000);
+  write_reg(CH2SET_ADDR, 0b00000000);
+  write_reg(CH3SET_ADDR, 0b00000000);
+  write_reg(CH4SET_ADDR, 0b00000000);
 
-  digitalWrite(H_CS_PIN, LOW);
-  delayMicroseconds(2);
-  hspi.beginTransaction(SPISettings(SPI_CLK, MSBFIRST, SPI_MODE1));
-  delayMicroseconds(2);
-  hspi.transfer(WREG | CONFIG1_ADDR);
-  delayMicroseconds(2);
-  hspi.transfer(1);
-  delayMicroseconds(2);
-  hspi.transfer(0b11010100); 
-  delayMicroseconds(2);
-  hspi.transfer(0b11010000); 
-  delayMicroseconds(2);
-  hspi.endTransaction();
-  digitalWrite(H_CS_PIN, HIGH);
-  delayMicroseconds(2);
-
-  digitalWrite(H_CS_PIN, LOW);
-  delayMicroseconds(2);
-  hspi.beginTransaction(SPISettings(SPI_CLK, MSBFIRST, SPI_MODE1));
-  delayMicroseconds(2);
-  hspi.transfer(WREG | CH1SET_ADDR);
-  delayMicroseconds(2);
-  hspi.transfer(3);
-  delayMicroseconds(2);
-  hspi.transfer(0b00000101);
-  delayMicroseconds(2);
-  hspi.transfer(0b00000101);
-  delayMicroseconds(2);
-  hspi.transfer(0b00000101);
-  delayMicroseconds(2);
-  hspi.transfer(0b00000101);
-  delayMicroseconds(2);
-  hspi.endTransaction();
-  digitalWrite(H_CS_PIN, HIGH);
-  delayMicroseconds(2);
-
-//  uint8_t res1 = read_reg(CH1SET_ADDR);
-//  uint8_t res2 = read_reg(CH2SET_ADDR);
-//  uint8_t res3 = read_reg(CH3SET_ADDR);
-//  uint8_t res4 = read_reg(CH4SET_ADDR);
-//  Serial.print(res1); Serial.print(" ");
-//  Serial.print(res2); Serial.print(" ");
-//  Serial.print(res3); Serial.print(" ");
-//  Serial.println(res4);
+  uint8_t res1 = read_reg(CH1SET_ADDR);
+  uint8_t res2 = read_reg(CH2SET_ADDR);
+  uint8_t res3 = read_reg(CH3SET_ADDR);
+  uint8_t res4 = read_reg(CH4SET_ADDR);
+  Serial.print(res1); Serial.print(" ");
+  Serial.print(res2); Serial.print(" ");
+  Serial.print(res3); Serial.print(" ");
+  Serial.println(res4);
   
   attachInterrupt(digitalPinToInterrupt(DRDY_PIN), onDRDY, FALLING);
   delay(100);
@@ -114,6 +71,10 @@ void loop() {
     int32_t chan4_bits32 = convert24To32bit(chan4_bits24);
 
     int32_t channels[4] = {chan1_bits32, chan2_bits32, chan3_bits32, chan4_bits32};
-    Serial.write((uint8_t*)channels, sizeof(channels));
+    //Serial.write((uint8_t*)channels, sizeof(channels));
+    Serial.print(chan1_bits32); Serial.print(" ");
+    Serial.print(chan2_bits32); Serial.print(" ");
+    Serial.print(chan3_bits32); Serial.print(" ");
+    Serial.println(chan4_bits32);
   }
 }
